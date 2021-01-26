@@ -1,8 +1,17 @@
 <p>
   <a href="{% url 'learning_logs:index' %}">学習ノート</a>-
-  <a href="{% url 'learning_logs:topics' %}">トピック一覧</a>
+  <a href="{% url 'learning_logs:topics' %}">トピック一覧</a>-
+  
+  {% if user.is_authenticated %}
+    hello {{user.username}}
+    <a href="{%url 'users:logout'%}"></a>
+  {% else %}
+    <a href="{%url 'users:register'%}">user登録</a>-
+    <a href="{%url 'users:login'%}">login</a>
+  {% endif %}
+    
 </p>
 
 {% block content %}
-  
+
 {% endblock content %}
