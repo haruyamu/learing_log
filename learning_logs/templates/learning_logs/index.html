@@ -1,8 +1,12 @@
 {% extends "learning_logs/base.html" %}
-{% block content %}
-<p>学習ノートを使えば好みのトピックに関して学習していることを記録していつも最新の状態を把握できます</p>
-  
-{% endblock content %}
+{% block page_header %}
+  <div class="jumbotron">
+    <h1 class="display-3">学んだことだけ記録しよう</h1>
+    <p>学習ノートを使えば好みのトピックに関して学習していることを記録して<br> 
+      いつも最新の状態を把握できます</p>
+      <a href="{%url 'users:register'%}" class="btn btn-lg btn-primary" role='button'>登録する &raquo;</a>
+    </div>
+{% endblock page_header %}
 
 
 
